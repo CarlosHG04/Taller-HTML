@@ -1,10 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <title>Enchiladas en salsa verde</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejemplo de uso de etiquetas comunes en HTML">
+    <title>Enchiladas en Salsa Verde</title>
+    <style>
+        /* Estilos globales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header, footer {
+            background-color: #2ecc71;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer ul li {
+            font-size: 1.2rem;
+            margin: 5px 0;
+        }
+
+        footer ul li::before {
+            content: "✔ ";
+            color: #1abc9c;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        main p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        main ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        main ul li {
+            font-size: 1.1rem;
+            margin: 8px 0;
+        }
+    </style>
 </head>
-    <footer>
+<body>
+
+    <header>
+        <h1>Enchiladas en Salsa Verde</h1>
+        <p>Una receta deliciosa de enchiladas con un toque fresco y sabroso.</p>
+    </header>
+
+    <main>
         <h1>Etiquetas Comunes en HTML</h1>
         <p>Las etiquetas comunes en HTML son las siguientes:</p>
         <ul>
@@ -18,11 +96,10 @@
             <li>li</li>
             <li>footer</li>
         </ul>
-    </footer>
-    <body>
+    </main>
+
+    <footer>
         <h1>Etiquetas Comunes en HTML</h1>
-        <p>Las etiquetas comunes en HTML son las siguientes:</p>
-        
-        </ul>
-    </body>
-</html>
+        <p>Las etiquetas más importantes para estructurar una página web.</p>
+        <ul>
+            <li>html</li>

@@ -1,25 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejemplo de Enlaces y Navegación en HTML</title>
+    <style>
+        /* Reset de márgenes y paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        /* Estilo para el título principal */
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #34495e;
+        }
+
+        /* Estilos de los enlaces */
+        a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        /* Listas */
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Contenedor principal */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Sección de enlaces externos */
+        .external-links {
+            margin-bottom: 30px;
+        }
+
+        /* Sección de navegación interna */
+        .internal-links {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .internal-links ul li {
+            margin-bottom: 12px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Ejemplo de Enlaces y Navegación en HTML</h1>
-    <a href="https://www.instagram.com/">Enlace</a>
-    <h2>Enlaces</h2>
-    <p>Enlaces a otras páginas:</p>
-    <ul>
-        <li><a href="https://www.google.com">Google</a></li>
-        <li><a href="https://www.bing.com">Bing</a></li>
-        <li><a href="https://www.yahoo.com">Yahoo</a></li>
-    </ul>
 
-    <h2>Navegación</h2>
-    <p>Navegación interna:</p>
-    <ul>
-        <li><a href="multimedia.html">Multimedia</a></li>
-        <li><a href="listas.html">Listas</a></li>
-    </ul>
-    <a href=""></a>
+    <div class="content">
+        <h1>Ejemplo de Enlaces y Navegación en HTML</h1>
+
+        <p class="external-links">
+            <a href="https://www.instagram.com/">Enlace a Instagram</a>
+        </p>
+
+        <h2>Enlaces Externos</h2>
+        <p>Enlaces a otras páginas:</p>
+        <ul>
+            <li><a href="https://www.google.com">Google</a></li>
+            <li><a href="https://www.bing.com">Bing</a></li>
+            <li><a href="https://www.yahoo.com">Yahoo</a></li>
+        </ul>
+
+        <h2>Navegación Interna</h2>
+        <p>Navegación dentro de nuestro sitio:</p>
+        <div class="internal-links">
+            <ul>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li><a href="listas.html">Listas</a></li>
+            </ul>
+        </div>
+    </div>
+
 </body>
 </html>
