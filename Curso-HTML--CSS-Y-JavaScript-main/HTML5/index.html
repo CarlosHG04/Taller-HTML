@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 14px;
+            color: #555;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .password-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .password-container input {
+            flex: 1;
+            padding-right: 30px; /* Espacio para el icono */
+        }
+        .password-container span {
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #888;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="return validarFormulario(event)">
+        <h1>Inicio de Sesión</h1>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required>
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" required>
+        <label for="password">Contraseña:</label>
+        <div class="password-container">
+            <input type="password" id="password" required>
+            <span onclick="togglePassword()">🔒</span> <!-- Icono de mostrar contraseña -->
+        </div>
+        <input type="submit" value="Iniciar Sesión">
+    </form>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById("password");
+            const icon = document.querySelector(".password-container span");
+
+            passwordInput.type = (passwordInput.type === "password") ? "text" : "password";
+            icon.textContent = (passwordInput.type === "password") ? "🔒" : "👁️"; // Cambia entre candado y ojo
+        }
+
+        function validarFormulario(event) {
+            event.preventDefault();
+
+            const nombre = document.getElementById("nombre").value;
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const correctCredentials = {
+                nombre: "jesus hernandez",
+                email: "jesus_hg04@outlook.com",
+                password: "Elprofedanteeselmejor"
+            };
+
+            if (nombre === correctCredentials.nombre && email === correctCredentials.email && password === correctCredentials.password) {
+                alert("¡Autenticación exitosa! Bienvenido.");
+            } else {
+                alert("Credenciales incorrectas. Inténtalo de nuevo.");
+            }
+        }
+    </script>
+</body>
+</html>
+
